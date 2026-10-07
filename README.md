@@ -1,6 +1,12 @@
-# GymMasterAppDemo
+# GymMaster
 
-Desktop Gym Management Application built with C#, Windows Forms, SQL Server and the MVP architectural pattern.
+[English](README.md) | [Ελληνικά](README_EL.md)
+
+**Desktop Gym Management System — Portfolio / Demo Edition**
+
+A complete Windows desktop application for managing customers, memberships, payments, health records and personalized workout programs.
+
+Built with **C#**, **Windows Forms**, **SQL Server**, **ADO.NET** and the **Model–View–Presenter (MVP)** architectural pattern.
 
 ## Overview
 
@@ -8,7 +14,7 @@ GymMasterAppDemo is a Windows desktop portfolio application for managing custome
 
 The interface is primarily in Greek. The supplied database scripts reproduce the application schema, reference catalogs and synthetic demonstration records.
 
-## Features
+## Key Features
 
 - Customer management and search.
 - Health records and emergency-contact information.
@@ -21,6 +27,52 @@ The interface is primarily in Greek. The supplied database scripts reproduce the
 - Excel export of analytics reports through ClosedXML.
 - Backup of the demo database only.
 
+## Screenshots
+
+The following screenshots show the running application with synthetic demo data.
+
+### Dashboard
+
+Summary indicators and charts for memberships, revenue and customer demographics.
+
+![GymMaster dashboard](screenshots/dashboard.png)
+
+### Customer Management
+
+Searchable customer records with synthetic contact and profile information.
+
+![GymMaster customer management](screenshots/customers.png)
+
+### Memberships & Payments
+
+Membership details, payment history and outstanding balances.
+
+![GymMaster memberships and payments](screenshots/memberships.png)
+
+### Analytics
+
+Reports for recent registrations, expiring memberships and unpaid memberships.
+
+![GymMaster analytics reports](screenshots/analytics.png)
+
+### Workout Programs
+
+Workout-program setup with goals, dates, frequency and exercise details.
+
+![GymMaster workout programs](screenshots/workout-programs.png)
+
+## Technical Highlights
+
+- MVP separation between the UI and application logic.
+- Repository-based SQL Server data access using ADO.NET.
+- Relational database with 13 tables, foreign keys, constraints and indexes.
+- Reproducible database deployment through SQL scripts.
+- Synthetic demo dataset with dynamic dates.
+- Runtime safety guard that prevents connections to a non-demo database.
+- Excel export using ClosedXML.
+- Printing and print-preview support.
+- Dashboard charts using Windows Forms DataVisualization.
+
 ## Architecture
 
 The application follows the Model–View–Presenter (MVP) pattern:
@@ -32,7 +84,7 @@ The application follows the Model–View–Presenter (MVP) pattern:
 - **Services** provides database backup functionality.
 - **Printing** builds printable membership and workout documents.
 
-Some dashboard queries live directly in the dashboard form. This is a single-project desktop solution, with SQL deployment scripts maintained separately.
+This is a single-project desktop solution, with SQL deployment scripts maintained separately.
 
 ## Technologies
 
@@ -145,42 +197,15 @@ GymMasterAppDemo/
 │   └── 04_SeedDemoData.sql
 ├── screenshots/
 ├── .gitignore
-└── README.md
+├── README.md
+└── README_EL.md
 ```
 
-## Screenshots
+## Current Limitations
 
-The following screenshots show the running application with synthetic demo data.
-
-### Dashboard
-
-Summary indicators and charts for memberships, revenue and customer demographics.
-
-![GymMaster dashboard](screenshots/dashboard.png)
-
-### Customer Management
-
-Searchable customer records with synthetic contact and profile information.
-
-![GymMaster customer management](screenshots/customers.png)
-
-### Memberships & Payments
-
-Membership details, payment history and outstanding balances.
-
-![GymMaster memberships and payments](screenshots/memberships.png)
-
-### Analytics
-
-Reports for recent registrations, expiring memberships and unpaid memberships.
-
-![GymMaster analytics reports](screenshots/analytics.png)
-
-### Workout Programs
-
-Workout-program setup with goals, dates, frequency and exercise details.
-
-![GymMaster workout programs](screenshots/workout-programs.png)
+- Windows-only .NET Framework desktop application.
+- Some dashboard-specific queries remain coupled to the Dashboard form and could be moved to dedicated repositories in a future refactoring.
+- The default demo configuration targets SQL Server Express with Windows Authentication.
 
 ## Privacy & Demo Disclaimer
 
