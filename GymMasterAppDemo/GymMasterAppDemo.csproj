@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC7A84D4-2BAA-48A3-ABAC-16B9F85335F1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GymMasterAppDemo</RootNamespace>
+    <AssemblyName>GymMasterAppDemo</AssemblyName>
+    <ApplicationIcon>Resources\gymmaster-icon.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.105.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.105.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML.Parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1d5f7376574c51ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.Parser.2.0.0\lib\netstandard2.0\ClosedXML.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.3.1.1\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml.Framework, Version=3.1.1.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.Framework.3.1.1\lib\net46\DocumentFormat.OpenXml.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, PublicKeyToken=c77e27b81f4d0187, processorArchitecture=MSIL">
+      <HintPath>..\packages\RBush.Signed.4.0.0\lib\net47\RBush.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AnalyticsRepository.cs" />
+    <Compile Include="Data\CustomerRepository.cs" />
+    <Compile Include="Data\Db.cs" />
+    <Compile Include="Data\DbConfig.cs" />
+    <Compile Include="Data\DbDiagnostics.cs" />
+    <Compile Include="Data\HealthRecordRepository.cs" />
+    <Compile Include="Data\IAnalyticsRepository.cs" />
+    <Compile Include="Data\ICustomerRepository.cs" />
+    <Compile Include="Data\IHealthRecordRepository.cs" />
+    <Compile Include="Data\ILookupRepository.cs" />
+    <Compile Include="Data\IMembershipRepository.cs" />
+    <Compile Include="Data\IWorkoutProgramRepository.cs" />
+    <Compile Include="Data\WorkoutProgramRepository.cs" />
+    <Compile Include="Forms\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutBoxForm.Designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnalyticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnalyticsForm.Designer.cs">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BackupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackupForm.Designer.cs">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChartDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChartDetailsForm.Designer.cs">
+      <DependentUpon>ChartDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentsMembershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentsMembershipForm.Designer.cs">
+      <DependentUpon>PaymentsMembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestFormPanels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestFormPanels.Designer.cs">
+      <DependentUpon>TestFormPanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkoutProgramEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkoutProgramEditForm.Designer.cs">
+      <DependentUpon>WorkoutProgramEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkoutProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkoutProgramForm.Designer.cs">
+      <DependentUpon>WorkoutProgramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnalyticsTab.cs" />
+    <Compile Include="Models\CustomerMembershipPrintModel.cs" />
+    <Compile Include="Models\CustomerMembershipPrintRowModel.cs" />
+    <Compile Include="Models\ExerciseOptionModel.cs" />
+    <Compile Include="Models\ExpiringTodayReportItem.cs" />
+    <Compile Include="Models\RecentCustomerReportItem.cs" />
+    <Compile Include="Models\UnpaidMembershipReportItem.cs" />
+    <Compile Include="Models\WorkoutGoalOptionModel.cs" />
+    <Compile Include="Models\WorkoutProgramDetailModel.cs" />
+    <Compile Include="Models\WorkoutProgramModel.cs" />
+    <Compile Include="Models\WorkoutProgramPrintDetailModel.cs" />
+    <Compile Include="Models\WorkoutProgramPrintHeaderModel.cs" />
+    <Compile Include="Presenters\AnalyticsPresenter.cs" />
+    <Compile Include="Presenters\BackupPresenter.cs" />
+    <Compile Include="Presenters\MainFormPresenter.cs" />
+    <Compile Include="Presenters\PaymentsMembershipPresenter.cs" />
+    <Compile Include="Presenters\WorkoutProgramEditMode.cs" />
+    <Compile Include="Presenters\WorkoutProgramEditPresenter.cs" />
+    <Compile Include="Presenters\WorkoutProgramPresenter.cs" />
+    <Compile Include="Printing\CustomerMembershipPrintService.cs" />
+    <Compile Include="Printing\WorkoutProgramPrintDocument.cs" />
+    <Compile Include="Services\DatabaseBackupService.cs" />
+    <Compile Include="Views\IAnalyticsView.cs" />
+    <Compile Include="Views\IBackupView.cs" />
+    <Compile Include="Views\IMainView.cs" />
+    <Compile Include="Views\INewMembershipView.cs" />
+    <Compile Include="Data\IOccupationRepository.cs" />
+    <Compile Include="Data\IPaymentRepository.cs" />
+    <Compile Include="Data\LookupRepository.cs" />
+    <Compile Include="Data\MembershipPaymentService.cs" />
+    <Compile Include="Data\MembershipRepository.cs" />
+    <Compile Include="Data\OccupationRepository.cs" />
+    <Compile Include="Data\PaymentRepository.cs" />
+    <Compile Include="Forms\CustomerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerEditForm.Designer.cs">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MembershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembershipForm.Designer.cs">
+      <DependentUpon>MembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewMembershipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewMembershipForm.Designer.cs">
+      <DependentUpon>NewMembershipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerEditMode.cs" />
+    <Compile Include="Models\CustomerListModel.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\HealthRecordModel.cs" />
+    <Compile Include="Models\MembershipCalculationHelper.cs" />
+    <Compile Include="Models\MembershipModel.cs" />
+    <Compile Include="Models\MembershipTypeOptionModel.cs" />
+    <Compile Include="Models\OccupationItemModel.cs" />
+    <Compile Include="Models\PaymentMethodOptionModel.cs" />
+    <Compile Include="Models\PaymentModel.cs" />
+    <Compile Include="Models\ServiceOptionModel.cs" />
+    <Compile Include="Models\StatusOptionModel.cs" />
+    <Compile Include="Presenters\CustomerEditPresenter.cs" />
+    <Compile Include="Presenters\CustomerPresenter.cs" />
+    <Compile Include="Presenters\MembershipPresenter.cs" />
+    <Compile Include="Presenters\NewMembershipPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ICustomerEditView.cs" />
+    <Compile Include="Views\ICustomerView.cs" />
+    <Compile Include="Views\IMembershipView.cs" />
+    <Compile Include="Views\IPaymentsMembershipView.cs" />
+    <Compile Include="Views\IWorkoutProgramEditView.cs" />
+    <Compile Include="Views\IWorkoutProgramView.cs" />
+    <EmbeddedResource Include="Forms\AboutBoxForm.resx">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnalyticsForm.resx">
+      <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BackupForm.resx">
+      <DependentUpon>BackupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChartDetailsForm.resx">
+      <DependentUpon>ChartDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerEditForm.resx">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MembershipForm.resx">
+      <DependentUpon>MembershipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewMembershipForm.resx">
+      <DependentUpon>NewMembershipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentsMembershipForm.resx">
+      <DependentUpon>PaymentsMembershipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TestFormPanels.resx">
+      <DependentUpon>TestFormPanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkoutProgramEditForm.resx">
+      <DependentUpon>WorkoutProgramEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkoutProgramForm.resx">
+      <DependentUpon>WorkoutProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_clients_group_16774.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document_report_16751.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_closedown_close_exit_pode_1842.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_house_icon_152213.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_people_workers_customers_icon_124243.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_archive_icon_152198.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_checklist_list_icon_219179.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_balance_equalizer_icon_152217.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_off_on_icon_152197.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4213447-arrow-load-loading-refresh-reload-restart-sync_115423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4213417-explore-find-glass-magnifier-search-view-zoom_115406.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_close_delete_exit_logout_remove_x_icon_123217.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draw_edit_pen_pencil_tool_write_writing_icon_123200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_circle_create_expand_new_plus_icon_123218.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_find_locate_1542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_find_locate_1542 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_arrow_1546 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_find_locate_icon_131498.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_arrow_icon_131504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface_edit_pencil_writing_school_circle_icon_132997.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface_edit_pencil_writing_school_icon_133013.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492790964-16input_84165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904675-configuration-edit-gear-options-preferences-setting-settings_122525.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904654-cancel-close-cross-delete-reject-remove-stop_122504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904677-add-addition-calculate-charge-create-new-plus_122527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904654-cancel-close-cross-delete-reject-remove-stop_1225041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interface_decline_reject_close_delete_failed_circle_icon_132982.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904666-calculate-close-delete-hide-minimize-minus-remove_122516.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904659-arrow-backup-down-download-save-storage-transfer_122509.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bootloader_users_person_people_6080 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\task_calendar_timeline_plan_start_date_due_date_icon_142241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gui_expired_icon_157158.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gui_expired_icon_1571581.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_116670.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_116664.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_1166641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbells_gym_fitness_sport_icon_186993.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_office_4658.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshpageaction_114520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3643781-check-checklist-complete-done-mark_113406 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer-outlined-symbol-of-the-tool_icon-icons.com_57775.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_gym_icon_124413.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_gym_icon_1244131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fitness_121040.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_backup_icon_217454.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_backup_icon_217454 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1904659-arrow-backup-down-download-save-storage-transfer_122509 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dumbbell_gym_icon_124413 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GymMaster-logo.png" />
+    <Content Include="Resources\gymmaster-icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

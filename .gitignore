@@ -1,0 +1,35 @@
+# Visual Studio and per-user settings
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build outputs and caches (at any directory depth)
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+*.cache
+*.log
+
+# NuGet packages are restored from the versioned packages.config
+/packages/
+
+# Local deployment and test outputs
+[Pp]ublish/
+TestResults/
+*.vspscc
+*.vssscc
+
+# SQL Server binary data and backups; keep database/*.sql
+*.mdf
+*.ndf
+*.ldf
+*.bak
+
+# OS-generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
